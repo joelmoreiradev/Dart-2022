@@ -1,3 +1,6 @@
+// Nota: En Dart, los arrays son llamados "List".
+
+
 void main() {
   
   // defino un listado de enteros
