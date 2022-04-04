@@ -35,12 +35,12 @@ class Heroe {
   
   // Constructor con nombre
   // el nombre del constructor puede ser cualquiera que se me ocurra, y se define luego del 'Heroe.', por lo que en este caso fromJson es su nombre
-  // recibo un Map cuyo key es un String, y su value también de tipo String, y para luego poder referirme a ese Map que recibo, le voy a asignar el nombre "json".
-  Heroe.fromJson(Map<String, String> json){
+  // recibo un Map cuyo key es un String, y su value también de tipo String, y para luego poder referirme a ese Map que recibo, le voy a asignar el nombre "jsonRecibido".
+  Heroe.fromJson(Map<String, String> jsonRecibido){
     // la propiedad nombre de la clase va a tener el valor de la propiedad nombre del Map que se recibió
-    // json es la referencia que tengo del Map recibido, podía ser cualquier otro nombre.
-    this.nombre = json['nombre']!;
-    this.poder = json['poder']!;
+    // jsonRecibido es la referencia que tengo del Map recibido, podía ser cualquier otro nombre.
+    this.nombre = jsonRecibido['nombre']!;
+    this.poder = jsonRecibido['poder']!;
   }
   
   // sobreescribo el método toString, el cual afecta el print.
