@@ -1,4 +1,7 @@
 // Constructores con nombre
+// Los constructores con nombre no son mas que constructores que tienen un nombre definido como: Clase.nombreConstructor
+// Los constructores con nombre se pueden usar de manera adicional al constructor "base" de la clase.
+// En este caso este tipo de constructor se está usando para recibir un Map como argumento y pasar sus propiedades a los atributos de la clase Heroe.
 
 void main() {
   
@@ -32,9 +35,10 @@ class Heroe {
   
   // Constructor con nombre
   // el nombre del constructor puede ser cualquiera que se me ocurra, y se define luego del 'Heroe.', por lo que en este caso fromJson es su nombre
-  // recibo un Map cuyo key es un String, y su value también de tipo String
+  // recibo un Map cuyo key es un String, y su value también de tipo String, y para luego poder referirme a ese Map que recibo, le voy a asignar el nombre "json".
   Heroe.fromJson(Map<String, String> json){
-    // la propiedad nombre de la clase va a tener el valor a la propiedad nombre del Map que se recibió
+    // la propiedad nombre de la clase va a tener el valor de la propiedad nombre del Map que se recibió
+    // json es la referencia que tengo del Map recibido, podía ser cualquier otro nombre.
     this.nombre = json['nombre']!;
     this.poder = json['poder']!;
   }
