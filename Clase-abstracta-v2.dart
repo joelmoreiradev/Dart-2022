@@ -1,6 +1,6 @@
 void main() {
   
-  // instancia de la clase Perro, y otra de la clase gato
+  // instancia de la clase Perro, y otra de la clase Gato
   final perro = new Perro();
   final gato = new Gato();
   
@@ -20,16 +20,17 @@ void sonidoAnimal(Animal animal) {
   
 }
 
-// clase abstracta llamada Animal
-// esta clase solo es usada para ser implementada o extendida en otras clases.
+// -------------- CLASE ABSTRACTA LLAMADA ANIMAL ----------------
+// esta clase solo es usada para ser implementada o extendida en otras clases, no se puede instanciar.
 abstract class Animal {
   
-  // propiedades de la clase abstracta
+  // propiedades de la clase abstracta, las cuales van a tener que ser implementadas/creadas obligatoriamente por las clases que implementen Animal
   int? patas;
   
   void emitirSonido();
   
 }
+
 
 // clase normal Perro, la cual implementa la clase Animal
 // para poder implementarla, si o si se debe también implementar todas las propiedades que están definidas en Animal
